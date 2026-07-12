@@ -1,0 +1,27 @@
+{
+  "name": "proyectom3_hugopiracun",
+  "version": "1.0.0",
+  "description": "SPA para una ap´licacion de chat con gemini personalizable",
+  "keywords": [
+    "chat",
+    ".",
+    "AI",
+    "SPA",
+    "gemini"
+  ],
+  "homepage": "https://github.com/git-leorepo/-git-leorepo-ProyectoM3_HugoPiracun#readme",
+  "bugs": {
+    "url": "https://github.com/git-leorepo/-git-leorepo-ProyectoM3_HugoPiracun/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git-leorepo/-git-leorepo-ProyectoM3_HugoPiracun.git"
+  },
+  "license": "ISC",
+  "author": "Hugo Leonardo Piracun",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
