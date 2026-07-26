@@ -17,23 +17,30 @@
 <body>
     <header class="encabezado">
         <div class="contenedor__encabezado">
-            <img class="encabezado__img" src="img/DBZ.png" alt="">
+            <img src="src/img/esfera.png" alt="esfera" class="contenedor__img">
+            <!-- data-link marca estos como navegación interna de la SPA -->             
             <nav class="encabezado__nav">
-                <a class="nav__a" href="Home">Home</a>
-                <a class="nav__a" href="Chat">Chat</a>
-                <a class="nav__a" href="About">About</a>
+                <a href="/" data-link class="nav__a">Home</a>
+                <a href="/chat" data-link class="nav__a">Chat</a>
+                <a href="/about" data-link class="nav__a">About</a>
             </nav>
         </div>
     </header>
 
-    <main class="cuerpo">        
+    <!-- Este es el único contenedor que JavaScript va a reescribir -->
+    <main id="app"></main>
+    <!-- Orden importante: views y router antes de main -->
+    <script src="./src/main.js" type="module"></script>
+
+    <!-- pagina de home -->
+    <!-- <section class="cuerpo">        
         <div class="contenedor__cuerpo">
             Chatea con Vegeta
             <button class="btn__contenedor">
                 Chat
             </button>            
         </div>
-    </main>
+    </section> -->
     
 </body>
 </html>

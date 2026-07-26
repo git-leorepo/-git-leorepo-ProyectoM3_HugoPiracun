@@ -30,10 +30,7 @@ Header
     display: flex;
     background-color:var(--color-principal);    
     height: 10vh;    
-    justify-content: center;
-    position: relative;
-    z-index: 100;
-    padding: 0.6rem 0;
+    justify-content: center;             
 }
 
 .contenedor__encabezado{
@@ -42,19 +39,17 @@ Header
     background-color: var(--color-principal);    
     justify-content: space-between;
     align-items: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
+    gap: 0.8rem;    
     border: #071638;
     border-bottom: 1px solid #e0e0e0;
 }
 
-.encabezado__img{
-    width: clamp(110px, 14vw, 220px); /*nunca sera menor de 80px, medianas crecera con 11 vw nunca sera mayor de 180*/
+.contenedor__img{
+    width: 25px;
     height: auto;
 }
 
-.encabezado__nav{
-    display: none;
+.encabezado__nav{    
     gap: 0.7rem;
     background-color: var(--color-principal);
     align-items: center;
@@ -97,9 +92,10 @@ body
 
 .contenedor__cuerpo{
     margin-top: 50vh;
-    width: 90vw;
+    width: 50vw;
+    height: 10vh;
     color:green;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-family: var(--bienvenido);
     background-color: rgba(223, 232, 241, 0.8);
     border-radius: 18px 18px 2px 18px;   
@@ -135,9 +131,12 @@ Media Querys INDEX
 ========================================================================== */
 
 @media (min-width:768px) {
-    
+    .contenedor__img{
+        width: 30px;
+        height: auto;
+    }
     .encabezado__nav{        
-        gap: 0.9rem;
+        gap: 2rem;
         flex-direction: row;    
         padding: 0;            
     }
@@ -150,6 +149,8 @@ Media Querys INDEX
         height: 110px;
         padding: 7px 10px;
         color: yellow;
+    
+        margin-top: 50vh;
     }
     .btn__contenedor{
         font-size:1.2rem;
@@ -162,8 +163,12 @@ Media Querys INDEX
 }
 
 @media (min-width:1024px) {
-    .encabezado__nav{ 
-        display: flex;       
+    .contenedor__img{
+        width: 40px;
+        height: auto;
+    }
+    .encabezado__nav{          
+        display: flex;      
         gap: 1.3rem;            
     }
     .nav__a{    
@@ -175,6 +180,7 @@ Media Querys INDEX
         height: 180px;
         padding: 7px 10px;
         color: red;
+        margin-top: 50vh;
     }
     .btn__contenedor{
         font-size:1.5rem;
@@ -192,7 +198,7 @@ Media Querys INDEX
 .notfound{
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     background-image: url('../img/fondo_404.webp');
     background-size: cover;
@@ -211,6 +217,7 @@ Media Querys INDEX
     margin-top: 30vh;    
     font-size: 40px;
     background: linear-gradient(to bottom, #ffffff, #8a8aff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 20px rgba(138, 138, 255, 0.3);
@@ -229,7 +236,7 @@ Media Querys INDEX
 }
 
 /* ==========================================================================
-Media Querys INDEX
+Media Querys NOTFOUND
 ========================================================================== */
 
 
