@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatAPI</title>
+    <link rel="stylesheet" href="src/css/normalizador.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-total navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>            
+            <a class="navbar-brand text-chatapi" href="/" data-link class="nav__a">CHATDBZ</a>
+            <img src="./src/img/esfera.png" alt="" class="esfera">
+            <div class="espacio"></div>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">            
+                    <li class="nav-item">                            
+                        <a class="nav-link active text-list" aria-current="page" href="/" data-link class="nav__a">Home</a>            
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-list" aria-current="page" href="/chat" data-link class="nav__a">Chat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-list" aria-current="page" href="/about" data-link class="nav__a">About</a>
+                    </li>                    
+                </ul>        
+            </div>
+        </div>
+    </nav>
+
+    <!-- Este es el único contenedor que JavaScript va a reescribir -->
+    <main id="app"></main>
+    <!-- Orden importante: views y router antes de main -->
+    <script src="./src/main.js" type="module"></script>
+
+    <section class="component-chat">
+        <div class="chatApp">
+            <!-- <header class="chatHeader">
+                <h1 class="chatTitle">Chat</h1>
+                <p class="chatSubtitle">Con tu personaje favorito</p>
+            </header> -->
+
+            <main class="chatMessages" aria-label="Mensajes">
+                <div class="message message--character">Hola, ¿en qué te ayudo?</div>
+                <div class="message message--user">Quiero practicar responsive.</div>
+                <div class="message message--character">Perfecto, empecemos con flexbox. Es ideal para layouts de una dimension</div>
+                <div class="message message--user">¿Y que hace flex:1?</div>
+                <div class="message message--character">Le dice al elemento que tome todo el espacio disponible en el eje p´rincipal. en nuestro chat, hace que el panel de mensajes crezca entre el header y el composer</div>
+                <div class="message message--user">¿Y el overflow: auto para que sirve?</div>
+                <div class="message message--character">Para que el scroll ocurra solo dentro del panel, no en toda la poagina. El header y el input quedan fijos siempre</div>
+                <div class="message message--user">Tiene muchoi sentido ahora</div>
+                <div class="message message--character">Exacto Y lo mejor es que el patron escala sin cambios: funciona desde 320 px hasta desktop</div>
+                <div class="message message--user">toma lo tuyo</div>
+                <!-- más mensajes -->            
+            </main>
+        
+
+            <form class="chatComposer">
+                <input 
+                class="chatInput" 
+                type="text" 
+                placeholder="Escribe un mensaje…"
+                aria-label="Escribe tu mensaje"
+                />
+                <button class="chatSend" type="submit">Enviar</button>
+            </form>
+        </div>
+
+    </section>
+    
+</body>
+</html>
