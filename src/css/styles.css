@@ -436,8 +436,8 @@ CHAT ALTERNATIVO
   padding: 6px 10px;
   border-radius: 8px;
   border: 1px solid #2a2e38;
-  background:transparent;
-  color: #e8e8e8;
+  background:var(--color-principal);
+  color: white;
 }
 
 .chat-container {
@@ -475,14 +475,16 @@ CHAT ALTERNATIVO
 
 .message--user {
     align-self: flex-end;
-    background: #8ab4f8;
-    color: #0f1115;
+    background: var(--color-principal);
+    color: white;
+    
 }
 
 .message--model {
     align-self: flex-start;
-    background: #2a2e38;
-    color: #e8e8e8;
+    background: #d1d9ee;
+    color: #000000;
+    opacity: 0.6;
 }
 
 .message-role {
@@ -564,7 +566,7 @@ CHAT ALTERNATIVO
     border-radius: 8px;
     font-size: 1rem;
     background: rgb(236, 236, 236);
-    color: #bbb7b7;
+    color: #111010;
 }
 
 .chat-input-area input::placeholder {
@@ -597,8 +599,8 @@ CHAT ALTERNATIVO
     font-size: 0.75rem;
     color: #8a8f99;
     border-radius: 6px;
-    background: #1a1d24;
-    border: 1px solid #2a2e38;
+    background: var(--color-principal);
+    border: 1px solid yellow;
     display: inline-block;
 }
 
