@@ -477,6 +477,7 @@ CHAT ALTERNATIVO
     align-self: flex-end;
     background: var(--color-principal);
     color: white;
+    opacity: 0.6;
     
 }
 
