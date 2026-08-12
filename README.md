@@ -65,11 +65,7 @@ Vista previa del proyecto en funcionamiento:
 
 ### 🎬 Demo en acción
 
-Para incluir un GIF de demostración, grabá la app con tu herramienta favorita (Loom, OBS, ScreenToGif) y subila a un hosting de imágenes (ej. GitHub, Imgur). Después reemplazá el placeholder:
-
-```md
-![Demo de ChatDBZ](URL_DE_TU_GIF_DEMO.gif)
-```
+![Demo de ChatDBZ](src/img/demo.gif)
 
 > 💡 Tips para las capturas:
 > - Mostrá una **conversación real con Vegeta** con al menos 2-3 intercambios.
@@ -357,10 +353,46 @@ copyright notice and this permission notice appear in all copies.
 **Hugo Leonardo Piracun**
 
 - 🐙 **GitHub:** [git-leorepo](https://github.com/git-leorepo)
-- 💼 **LinkedIn:** [Hugo Leonardo Piracun](https://www.linkedin.com/in/hugo-piracun)
+- 💼 **LinkedIn:** [Hugo Leonardo Piracun](www.linkedin.com/in/hugo-leonardo-piracun-romero-1989aab0)
 - 🗂️ **Portafolio:** https://tusitio.com (en construcción)
 
 > ¿Te gusta el proyecto? Dejale una ⭐ al repositorio y no dudes en contactarme para sugerencias o colaboraciones.
+
+---
+
+## 🤖 Prompts con IA
+
+Prompts utilizados durante el desarrollo del proyecto para darle forma a la personalidad de los personajes del chat.
+
+### Prompt 1 — Personalidad de Vegeta
+
+**Contexto:** El proyecto necesita un chatbot que represente fielmente a Vegeta, el Príncipe de los Saiyajin, con su carácter arrogante, orgulloso y despectivo hacia el usuario.
+
+**Objetivo:** Generar un `SYSTEM_INSTRUCTION` que modele la personalidad, las frases célebres y las reglas de formato de Vegeta para que el modelo responda como el personaje.
+
+**Restricciones:** Respuestas en máximo 3 líneas, apodos obligatorios ("terrícola insecto", "sabandija"), sin groserías fuertes, salida del personaje para temas médicos/legales/financieros.
+
+**Evidencia:** La implementación quedó en `src/services/prompts.js` con la constante `SYSTEM_INSTRUCTION`, el array `VEGETA_PHRASES` y la entrada `vegeta` en `PERSONAS`.
+
+### Prompt 2 — Botón de chat con estética Dragon Ball Z
+
+**Contexto:** El proyecto tiene un botón "Chatea" (`btn_chat`) en la vista Home con estilos genéricos. Se busca que el diseño acompañe la temática de Dragon Ball Z.
+
+**Objetivo:** Generar estilos CSS para el botón con estética del universo Dragon Ball Z: aura de energía azul eléctrico (estilo Vegeta), destello de ki animado, glow exterior y efecto dorado Super Saiyan al pasar el mouse.
+
+**Restricciones:** Mantener la misma clase `.btn_chat`, usar `--color-principal` y `--color-secundario` de las variables ya definidas en `:root`, no agregar dependencias externas ni JavaScript.
+
+**Evidencia:** La implementación quedó en `src/css/styles2.css` con el gradiente azul, la animación `@keyframes kiFlash` y los estados `:hover` / `:active`.
+
+### Prompt 3 — Fix del menú hamburguesa que no se despliega
+
+**Contexto:** En la vista móvil de la app, el nav quedaba oculto y el botón hamburguesa (`.encabezado__hamburger` con `id="btn-menu"`) no desplegaba los enlaces al hacer click. El HTML y el CSS ya tenían la clase `.is-active` definida, pero nada la activaba.
+
+**Objetivo:** Encontrar el error que impide que el menú se despliegue y explicar la solución, sin escribir el código por el usuario.
+
+**Restricciones:** No modificar los archivos, solo indicar la causa del problema (análisis de `index.html`, `src/css/styles.css` y la ausencia de JavaScript) y dejar que el usuario implemente la corrección.
+
+**Evidencia:** El diagnóstico concluyó que faltaba un `<script>`/archivo JS con un `eventListener` sobre `#btn-menu` que agregara/quitara la clase `is-active` al `.encabezado__nav`, ya que el CSS estaba correcto desde el inicio.
 
 ---
 
