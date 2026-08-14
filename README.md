@@ -162,7 +162,7 @@ Para que las rutas `/chat` y `/about` funcionen al recargar la página, creá un
 
 La aplicación ya está disponible en Vercel:
 
-**[🔗 ChatDBZ — Ver proyecto en producción](https://proyecto-m3-hugo-piracun-4nm7cqwok-git-leorepos-projects.vercel.app)**
+**[🔗 ChatDBZ — Ver proyecto en producción](https://proyecto-m3-hugo-piracun.vercel.app/)**
 
 ---
 
